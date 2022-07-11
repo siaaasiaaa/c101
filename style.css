@@ -1,0 +1,124 @@
+html, body
+{
+  height: 100%;
+  margin: 0;
+}
+h1{
+	color:red;
+}
+body{
+	background-image: url("https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2017/06/messaging-apps.jpg?q=50&fit=contain&w=943&h=472&dpr=1.5");
+	font-size: larger;
+	color: red;
+}
+
+
+.header
+{
+	color: rgba(255, 0, 25, 0.603);font-family: "times";font-size: 80px;letter-spacing: 10px;margin-top: 80px;
+}
+.header img
+{
+	width: 80px;margin-left: -15px;
+}
+
+.login_div
+{
+	font-size: larger;
+	background:lightsalmon;float: none;border-radius: 15px;
+}
+
+.logo
+{
+	font-size: larger;
+	width: 80px;margin-top: 30px;border-radius: 40px;
+}
+.nme{
+	font-style: italic;
+}
+#login_button
+{
+	font-size: larger;
+	width: 80%;border-radius: 15px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#room_name
+{
+	font-size:20px;;
+	border-radius: 50px;
+	font-family:'Times New Roman', Times, serif ;
+	border-color: white;
+}
+
+
+#logout
+{
+	font-size: larger;
+	font-size: 20px; float: right;
+    background-image: url("logout.png");
+	height: 120px;
+	background-color: black;
+	border-radius: 30px;
+
+}
+
+
+#output
+{
+	font-size: larger;
+	padding: 10px; width:80%;background: rgba(255,255,255,0.8);border-radius: 15px;
+}
+
+.input_div_room_page
+{
+	font-size: larger;
+	width: 80%;
+}
+
+.input_div label
+{
+	font-size: larger;
+	color: blue;font-size: 20px;
+}
+
+
+.input_div_message_page
+{
+	font-size: larger;
+	position: fixed;bottom: 0px;width: 100%;background: rgba(255,255,255,0.8);
+}
+.input_div_message_page label
+{
+	font-size: larger;
+	color: blue;
+}
+.input_div_message_page #msg
+{
+	width: 80%;
+}
+.input_div_message_page button
+{
+	margin-top: 15px;
+	width: 50%; 
+}
+.color_white
+{
+	color: white
+}
+
+.user_tick
+{
+	width:20px;
+}
+.message_h4
+{
+	padding-left:5px;color:grey;
+}
+#addRoom{
+	background-color: red;
+	font-size:30px;;
+	border-radius: 50px;
+	font-family:'Times New Roman', Times, serif ;
+	border-color: white;
+}

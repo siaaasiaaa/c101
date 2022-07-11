@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<title>Chat App</title>
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="chat_room.js"></script>
+
+<!-- 
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="chat.js"></script>
+-->
+</head>
+
+<body>
+	<button id="logout" style="width: 120px;"style="height: 200px"onclick="logout()"></button>
+
+	<center>
+		<h1 class="header">
+			Chat App 
+			<img src="data:image/png;base64,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">
+			
+		</h1>
+		<div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div">
+
+		
+			-->	
+			<input type="text" id="room_name" class="form-control" placeholder="Room Name">
+			
+			<button id="addRoom" class="btn btn-primary" onclick="addroom();">Add Room</button>
+			</div>
+			<h1>Thanks for viewing my app, hope you will like it.</h1>
+		
+		
+		
+			<br><br>
+		</div>
+	</center>
+</body>
+
+</html>
